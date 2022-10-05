@@ -1,8 +1,16 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 $font-stack: 'Playfair Display', serif;
-$primary-color: #333;
 
+@mixin theme($background: #333, $primary-color: #fff){
+  font-family: $font-stack;
+  background: $background;
+  color: $primary-color;
 
+}
 
+nav{
+  @include theme;
+}
 
