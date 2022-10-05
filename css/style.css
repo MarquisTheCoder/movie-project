@@ -1,8 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-nav {
-  font-family: "Playfair Display", serif;
-  background: #333;
+@import url("https://fonts.googleapis.com/css2?family=Asul&display=swap");
+@font-face {
+  font-family: Graphik;
+  src: url("../font/GraphikBold.otf");
+}
+body {
+  font-family: "Graphik";
+  background: #32152B;
   color: #fff;
+}
+
+nav {
+  font-family: "Graphik";
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #F0E7EE;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.navbar-split--button {
+  font-family: "Graphik";
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: none;
+}
+
+.split-button-icon {
+  filter: invert(100%);
+  width: 2.1em;
+}
+
+.split-button-icon:hover {
+  filter: invert(99%) drop-shadow(3px 0px 0px rgba(240, 101, 207, 0.6666666667));
+}
+
+#lisa-icon {
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */

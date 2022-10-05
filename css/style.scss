@@ -1,16 +1,49 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul&display=swap');
 
-$font-stack: 'Playfair Display', serif;
+@font-face {
+  font-family: Graphik;
+  src: url("../font/GraphikBold.otf");
+}
 
-@mixin theme($background: #333, $primary-color: #fff){
+@mixin lisaTheme($background: #333, $primary-color: #fff , $font-stack: 'Graphik'){
   font-family: $font-stack;
   background: $background;
   color: $primary-color;
-
 }
+
+body{
+  @include lisaTheme($background: #32152B);
+}
+
 
 nav{
-  @include theme;
+  @include lisaTheme($background: #00000000);
 }
+nav a{
+  text-decoration: none;
+  color: #F0E7EE;
+}
+nav ul{
+  list-style-type: none;
+}
+
+.navbar-split--button{
+  @include lisaTheme($background: #00000000);
+  border: none;
+}
+
+.split-button-icon{
+  filter: invert(100%);
+  width: 2.10em;
+}
+.split-button-icon:hover{
+    filter: invert(99%) drop-shadow(3px 0px 0px #F065CFaa);
+}
+#lisa-icon{
+  font-size: 2em;
+}
+
+
 
