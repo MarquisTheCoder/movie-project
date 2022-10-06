@@ -19,12 +19,12 @@ nav {
 }
 
 nav a {
-  text-decoration: none;
+  text-decoration: unset;
   color: #F0E7EE;
 }
 
 nav a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #F0E7EE;
 }
 
