@@ -20,12 +20,14 @@ body{
 }
 
 
+
 nav{
   @include lisaTheme($background: #00000000);
 }
 nav a{
   text-decoration: none;
   color: #F0E7EE;
+
 }
 nav a:hover{
   text-decoration: none;
@@ -77,4 +79,41 @@ input.search-field {
 input.search-field:focus {
   width: 35vw;
   border: 1px solid #ffffff
+}
+h2{
+  color: #F0E7EEaa;
+
+}
+.container-fluid{
+  overflow: scroll;
+  height: 79vh;
+  scrollbar-width: none;
+}
+.container-generated-content{
+
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #6D2E5E33;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.generated-content--box{
+  //background-color: #33333355;
+  flex:none;
+  height: 80%;
+  width: 33vw;
+  border-radius: 10px;
+  transition: opacity ease-out 700ms;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.generated-content--box:hover{
+  cursor: pointer;
+  opacity: 0.43;
 }

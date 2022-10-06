@@ -81,4 +81,38 @@ input.search-field:focus {
   border: 1px solid #ffffff;
 }
 
+h2 {
+  color: rgba(240, 231, 238, 0.6666666667);
+}
+
+.container-fluid {
+  overflow: scroll;
+  height: 79vh;
+  scrollbar-width: none;
+}
+
+.container-generated-content {
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(109, 46, 94, 0.2);
+  overflow-x: scroll;
+  scrollbar-width: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.generated-content--box {
+  flex: none;
+  height: 80%;
+  width: 33vw;
+  border-radius: 10px;
+  transition: opacity ease-out 700ms;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.generated-content--box:hover {
+  cursor: pointer;
+  opacity: 0.43;
+}
+
 /*# sourceMappingURL=style.css.map */
