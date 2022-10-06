@@ -115,4 +115,33 @@ h2 {
   opacity: 0.43;
 }
 
+.generated-content--box:hover .disappear {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(51, 51, 51, 0.4);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.delete-button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(50, 21, 43, 0.6);
+}
+
+.video-delete {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(50, 21, 43, 0.6);
+}
+
+.gen-icon {
+  filter: invert(100%);
+}
+
+.disappear {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
