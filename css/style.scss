@@ -136,6 +136,10 @@ h2{
   border-radius: 5px;
   background-color: #32152B99;
 }
+iframe{
+  opacity: 100%;
+  transition: all ease-out 500ms;
+}
 .gen-icon{
   filter: invert(100%);
 }

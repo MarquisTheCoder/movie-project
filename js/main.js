@@ -141,6 +141,7 @@ $(function(){
                         right: 10px;
                         z-index: 7;
                    "
+                   
                    ><img class="gen-icon "src="../img/feather/x.svg"/></button>
                    
                    <iframe id="iframe-embed"  scrolling="no" frameborder="0"
