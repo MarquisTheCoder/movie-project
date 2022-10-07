@@ -41,6 +41,7 @@ $(function(){
                                       </div>`)
                let movieBox = $(`<div data-id='${movies[i].id}'
                                       class='generated-content--box'
+                                      data-img='${movies[i].imgLink}'
                                       data-embedded='${movies[i].embeddedUrl}'
                                       data-title='${movies[i].movieTitle}'
                                       data-description='${movies[i].description}'>
@@ -77,6 +78,7 @@ $(function(){
                
                let movieBox = $(`<div data-id="${movies[movieIndex].id}"
                                       class='generated-content--box'
+                                      data-img='${movies[movieIndex].imgLink}'
                                       data-embedded='${movies[movieIndex].embeddedUrl}'
                                       data-title='${movies[movieIndex].movieTitle}'
                                       data-description='${movies[movieIndex].description}'> </div>`)
@@ -116,7 +118,8 @@ $(function(){
                
                
                let movieBox = $(`<div data-id="${movies[movieIndex].id}"
-                                      class='generated-content--box'
+                                      class='generated-content--box',
+                                      data-img='${movies[movieIndex].imgLink}'
                                       data-embedded='${movies[movieIndex].embeddedUrl}'
                                       data-title='${movies[movieIndex].movieTitle}'
                                       data-description='${movies[movieIndex].description}'> </div>`)
@@ -164,7 +167,53 @@ $(function(){
                     $('.video-delete').parent().remove()
                })
           })
+          let currentObj = null
+          $('.generated-content--box').on('contextmenu', function(e){
+               e.preventDefault()
+               $('.edit-wrapper').toggleClass('hide')
+               currentObj = $(this)
+          })
+         
+         //editing movie in db on send 
+          $('#edit-send').on('click', function(){
+               let newName = $('#name').val()
+               let newRating = $('#rating').val()
+               let id  = $(currentObj).data('id')
+               
+               let url = glitchUrl + '/'+  id
+               console.log(newName)
+               let putData = {
+                    id: id,
+                    movieTitle: newName,
+                    imgLink: $(currentObj).data('img'),
+                    embeddedUrl: $(currentObj).data('embedded'),
+                    rating: newRating,
+                    description: $(currentObj).data('description')
+               }
+
+               let putReq = {
+                    method: 'PUT',
+                    headers:{
+                         'Content-Type' : 'application/json'
+                    },
+                    body: JSON.stringify(putData)
+
+               }
+               fetch(url, putReq)
+               $(newName).val('')
+               $(newRating).val('')
+               $('.edit-wrapper').toggleClass('hide')
+               
+          })
           
+          
+          
+          $('.edit-wrapper').on('contextmenu', function(e){
+                    e.preventDefault()
+                    $('.edit-wrapper').toggleClass('hide')
+                    
+                    
+               })
           $('.delete-button').on('click',function () {
                // fetch(glitchUrl)
                let deleteData = {
