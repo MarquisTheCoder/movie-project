@@ -10,12 +10,12 @@
  */
 
 $(function(){
-     
+     // glitch movie base url for the post and get requests
      let glitchUrl = 'https://clear-malleable-asparagus.glitch.me/movies'
      function getRandomArbitrary(min, max) {
           return Math.random() * (max - min) + min;
      }
-     
+     //getting the movies asynchronously 
      async function getMovies(){
           let results = await fetch(glitchUrl)
           let movies = await results.json()
@@ -23,7 +23,9 @@ $(function(){
           
           
           console.log(movies)
+          
           for(let i = 0; i <= 7; i++){
+               //delete the movie  
                let deleteButton = $('<button class="delete-button"><img class="gen-icon"' +
                                          ' src="../img/feather/x.svg"/></button>')
                
@@ -39,6 +41,7 @@ $(function(){
                                         <p>${movies[i].description}</p>
                                         <h6>rating: ${movies[i].rating}</h6>
                                       </div>`)
+               //creating movie object and applying data attributes
                let movieBox = $(`<div data-id='${movies[i].id}'
                                       class='generated-content--box'
                                       data-img='${movies[i].imgLink}'

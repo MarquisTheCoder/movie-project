@@ -12,9 +12,15 @@
 
 window.onload = function () {
     document.getElementsByClassName('submit-btn')[0].addEventListener('click', ()=>{
+         
+         //grabbing title and rating
          let title = document.getElementById('title').value
          let rating = document.getElementById('rating').value
+         
+         // the api link and url
          let imdbUrl = `https://api.themoviedb.org/3/search/movie?api_key=a5f2ca1222f74d272c6d180f5d898ba6&language=en-US&query=${title}&page=1&include_adult=false`
+         
+         // this is  grabbing the movie title, poster, rating, etc.  from the json file and posting it on our website
          fetch(imdbUrl)
           .then(data => data.json())
           .then(results => {
@@ -34,6 +40,7 @@ window.onload = function () {
                     },
                     body: JSON.stringify(newJson)
                }
+               
                fetch('https://clear-malleable-asparagus.glitch.me/movies', methodData)
                
           })
