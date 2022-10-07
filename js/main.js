@@ -37,7 +37,7 @@ $(function(){
                deleteButton.css('right', '5px')
                deleteButton.css('z-index', '3')
                let movieInformation = $(`<div  class="movie-info disappear  p-5 " style="z-index: 9; color: white;">
-                                        <h5>${movies[i].movieTitle}</h5>
+                                        <h5>${movies[i].movieTitle}:</h5>
                                         <p>${movies[i].description}</p>
                                         <h6>rating: ${movies[i].rating}</h6>
                                       </div>`)
@@ -64,7 +64,7 @@ $(function(){
           for(let i = 0; i <= 7; i++){
                let movieIndex = Math.floor(getRandomArbitrary(0,max))
                let movieInformation = $(`<div  class="movie-info disappear  p-5 " style="z-index: 9; color: white;">
-                                        <h5>${movies[movieIndex].movieTitle}</h5>
+                                        <h5>${movies[movieIndex].movieTitle}:</h5>
                                         <p>${movies[movieIndex].description}</p>
                                         <h6>rating: ${movies[movieIndex].rating}</h6>
                                       </div>`)
@@ -114,7 +114,7 @@ $(function(){
                let movieIndex = Math.floor(getRandomArbitrary(0,max))
                
                let movieInformation = $(`<div  class="movie-info disappear  p-5 " style="z-index: 9; color: white;">
-                                        <h5>${movies[movieIndex].movieTitle}</h5>
+                                        <h5>${movies[movieIndex].movieTitle}:</h5>
                                         <p>${movies[movieIndex].description}</p>
                                         <h6>rating: ${movies[movieIndex].rating}</h6>
                                       </div>`)
