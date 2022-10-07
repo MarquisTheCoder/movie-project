@@ -200,8 +200,8 @@ $(function(){
 
                }
                fetch(url, putReq)
-               $(newName).val('')
-               $(newRating).val('')
+               $('#name').val('')
+               $('#rating').val('')
                $('.edit-wrapper').toggleClass('hide')
                
           })
