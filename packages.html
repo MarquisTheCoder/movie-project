@@ -1,16 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<!--
-    Creator: Deshawn Marquis, Williams
-    Github Profile: https://github.com/MarquisTheCoder
-    Date Created: 10/4/22
-    Time Created: 1:23 PM
-    File Name: index.html
-    -->
 <head>
+	<meta charset="UTF-8">
 	
 	<title>Lisa - Packages</title>
-	<meta charset="UTF-8">
 	
 	<!-- jquery cdn -->
 	<meta name="viewport" content="initial-scale=1, width=device-width">
@@ -25,68 +19,76 @@
 	      rel="stylesheet">
 	
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/packages.css">
 	
-	<script src="js/packages.js.js"></script>
+	<script src="js/packages.js"></script>
 	
 </head>
 <body class="p-3">
-<header>
-	<nav class="navbar d-flex mt-3">
-		<section class="navbar-section d-flex w-100 justify-content-between">
-			
-			<div class="navbar-section-div--split-left">
-				<ul class="d-flex split-left gap-5">
-					<li>
-						<a href="index.html" class="navbar-split--button">
+<nav class="navbar d-flex mt-5">
+	<section class="navbar-section d-flex w-100 justify-content-between">
+		<div class="navbar-section-div--split-left">
+			<ul class="d-flex split-left gap-5">
+				<li>
+					<a href="index.html">
+						<button class="navbar-split--button">
 							<img src="img/feather/home.svg" class="split-button-icon" alt="">
-						</a>
-					</li>
-					<li>
-						<button class="navbar-split--button">
-							<img src="img/feather/zap.svg" class="split-button-icon" alt="">
 						</button>
-					</li>
-					<li>
-						<button class="navbar-split--button">
-							<img src="img/feather/plus-circle.svg" class="split-button-icon" alt="">
-						</button>
-					</li>
-				</ul>
-			</div>
-			
-			<div class="navbar-section-div--split-right">
-				<a href="#" id="lisa-icon" class="mx-5">
-					LISA
-				</a>
-			</div>
-		
-		</section>
-	</nav>
-</header>
-
-<main class="d-flex justify-content-center justify-items-center w-100">
+					</a>
+				</li>
+				<li>
+					<button class="navbar-split--button">
+						<img src="img/feather/zap.svg" class="split-button-icon" alt="">
+					</button>
+				</li>
+				<li>
+					<button class="navbar-split--button">
+						<img src="img/feather/plus-circle.svg" class="split-button-icon" alt="">
+					</button>
+				</li>
+				<li>
+					<div class="search-wrapper">
+						<img src="img/feather/search.svg" class="split-button-icon search-icon" alt="">
+						<input type="text" class="search-field">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-section-div--split-right">
+			<a href="index.html" id="lisa-icon" class="mx-5">
+				LISA
+			</a>
+		</div>
 	
-	<section class="main-container d-flex-column ">
-		
-		
-		<h2 class="text-center mt-4">$99 HD</h2>
-		<h3 class="text-center">HD Movie Package</h3>
-		<img id="splash" src="img/vikings-splash%20.png" alt="">
-		<form method="post" action="" class="d-flex-column justify-content-centerw-100">
-			<div class="d-flex mx-auto p-0 m-0">
-				<input type="text">
-				<button> Add Movie </button>
-			</div>
-			
-		</form>
 	</section>
+</nav>
 
+<h1 class="mt-5 mb-5 text-center">Choose A Movie Package</h1>
 
-</main>
+<div class="row text-center w-50 mx-auto">
+	<div class="wrapper">
+		<div class="card text-bg-dark">
+			<div class="card-body text-bg-dark">
+				<h5 class="card-title text-bg-dark">Add Movie</h5>
+				<p class="card-text text-bg-dark">Unlimited Movies (With ads)</p>
+				<p>$7.99 / Month</p>
+				
+					<label for="title">Title</label>
+					<input id="title" type="text">
+					<label for="rating">Rating</label>
+					<input id="rating" type="text">
+					<button class="btn btn-secondary submit-btn">Add Movie</button>
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div style="position: absolute; bottom: 1%; right: 1%">Terms Apply</div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-
 </body>
 </html>

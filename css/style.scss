@@ -5,8 +5,11 @@
 @font-face {
   font-family: Graphik;
   src: url("../font/GraphikBold.otf");
-}
 
+}
+*{
+  scrollbar-color: #333333;
+}
 @mixin lisaTheme($background: #333, $primary-color: #fff , $font-stack: 'Graphik'){
   font-family: $font-stack;
   background: $background;
@@ -15,7 +18,7 @@
 
 body{
   @include lisaTheme($background: #32152B);
-  background: linear-gradient(#32152B ,#6D2E5E);
+  background: linear-gradient(#1F0D1B,#32152B ,#6D2E5E);
   background-size: 100vw 100vh;
 }
 
@@ -87,18 +90,18 @@ h2{
 }
 .container-fluid{
   overflow: scroll;
-  height: 79vh;
+  height: 82.1vh;
   scrollbar-width: none;
 }
 .container-generated-content{
 
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   border-radius: 10px;
-  background-color: #6D2E5E33;
+  background-color: #6D2E5E00;
   overflow-x: scroll;
   scrollbar-width: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  //box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .generated-content--box{
   //background-color: #33333355;

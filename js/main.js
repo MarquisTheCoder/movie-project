@@ -19,7 +19,7 @@ $(function(){
      async function getMovies(){
           let results = await fetch(glitchUrl)
           let movies = await results.json()
-          let max = movies.length
+          let max = movies.length - 1
           
           
           console.log(movies)
@@ -58,7 +58,7 @@ $(function(){
           }
           
           for(let i = 0; i <= 7; i++){
-               let movieIndex = Math.floor(getRandomArbitrary(5,max-1))
+               let movieIndex = Math.floor(getRandomArbitrary(0,max))
                let movieInformation = $(`<div  class="movie-info disappear  p-5 " style="z-index: 9; color: white;">
                                         <h5>${movies[movieIndex].movieTitle}</h5>
                                         <p>${movies[movieIndex].description}</p>
@@ -106,7 +106,7 @@ $(function(){
                
                
               
-               let movieIndex = Math.floor(getRandomArbitrary(5,max-1))
+               let movieIndex = Math.floor(getRandomArbitrary(0,max))
                
                let movieInformation = $(`<div  class="movie-info disappear  p-5 " style="z-index: 9; color: white;">
                                         <h5>${movies[movieIndex].movieTitle}</h5>
