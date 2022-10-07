@@ -22,4 +22,9 @@ main {
   height: auto;
 }
 
+form {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 /*# sourceMappingURL=packages.css.map */
