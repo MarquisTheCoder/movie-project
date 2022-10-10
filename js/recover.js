@@ -34,7 +34,8 @@ $(function(){
                          }
                          let deleteUrl = deletedUrl + '/' + movie.id
                          fetch(glitchUrl, postRequest)
-                         fetch(deleteUrl,deleteRequest )
+                         fetch(deleteUrl,deleteRequest ).then(() => location.reload())
+                         
                     })
                })
      })

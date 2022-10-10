@@ -10,11 +10,13 @@
  */
 
 $(function(){
+     
      // glitch movie base url for the post and get requests
      let glitchUrl = 'https://clear-malleable-asparagus.glitch.me/movies'
      function getRandomArbitrary(min, max) {
           return Math.random() * (max - min) + min;
      }
+     
      //getting the movies asynchronously 
      async function getMovies(){
           let results = await fetch(glitchUrl)
@@ -22,9 +24,10 @@ $(function(){
           let max = movies.length - 1
           
           
+          
           console.log(movies)
           
-          for(let i = 0; i <= 7; i++){
+          for(let i = 0; i <= 20; i++){
                //delete the movie  
                let deleteButton = $('<button class="delete-button"><img class="gen-icon"' +
                                          ' src="../img/feather/x.svg"/></button>')
@@ -61,7 +64,7 @@ $(function(){
                movieBox.append(movieInformation)
           }
           
-          for(let i = 0; i <= 7; i++){
+          for(let i = 0; i <= 20; i++){
                let movieIndex = Math.floor(getRandomArbitrary(0,max))
                let movieInformation = $(`<div  class="movie-info disappear  p-5 " style="z-index: 9; color: white;">
                                         <h5>${movies[movieIndex].movieTitle}:</h5>
@@ -78,7 +81,9 @@ $(function(){
                deleteButton.css('top', '5px')
                deleteButton.css('right', '5px')
                deleteButton.css('z-index', '3')
-               
+              
+              
+               //generating movies with data from the api call
                let movieBox = $(`<div data-id="${movies[movieIndex].id}"
                                       class='generated-content--box'
                                       data-img='${movies[movieIndex].imgLink}'
@@ -95,7 +100,7 @@ $(function(){
                movieBox.append(movieInformation)
           }
           
-          for(let i = 0; i <= 7; i++){
+          for(let i = 0; i <= 20; i++){
                
                
                let deleteButton = $('<button class="delete-button"><img' +
@@ -206,6 +211,7 @@ $(function(){
                $('#name').val('')
                $('#rating').val('')
                $('.edit-wrapper').toggleClass('hide')
+               
                
           })
           

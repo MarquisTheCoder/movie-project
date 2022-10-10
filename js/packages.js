@@ -24,15 +24,19 @@ window.onload = function () {
          fetch(imdbUrl)
           .then(data => data.json())
           .then(results => {
+               
+               //forming post data/body
                let newJson = {
                     id: results['results'][0]['id'],
                     movieTitle: title,
                     rating: rating,
+                    //calling the image poster and description from the api
                     imgLink:"https://image.tmdb.org/t/p/w1280/" + results['results'][0]['poster_path'],
                     embeddedUrl: '',
                     description: results['results'][0]['overview']
                }
                
+               //forming post requests
                let methodData = {
                     method: 'POST',
                     headers: {
@@ -40,8 +44,10 @@ window.onload = function () {
                     },
                     body: JSON.stringify(newJson)
                }
-               
-               fetch('https://clear-malleable-asparagus.glitch.me/movies', methodData)
+               //posting the data to the json server
+               $('#title').val('')
+               $('#rating').val('')
+               fetch('https://clear-malleable-asparagus.glitch.me/movies', methodData).then(() => location.reload())
                
           })
     })
