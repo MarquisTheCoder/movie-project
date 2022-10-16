@@ -10,9 +10,10 @@
  */
 
 $(function(){
+     let moviesArray = [];
      
      // glitch movie base url for the post and get requests
-     let glitchUrl = 'https://clear-malleable-asparagus.glitch.me/movies'
+     let glitchUrl = 'https://clear-malleable-asparagus.glitch.me/movies';
      function getRandomArbitrary(min, max) {
           return Math.random() * (max - min) + min;
      }
@@ -22,6 +23,7 @@ $(function(){
           let results = await fetch(glitchUrl)
           let movies = await results.json()
           let max = movies.length - 1
+          
           
           
           
